@@ -1,0 +1,265 @@
+generated: '2026-08-26'
+method: probed
+source: https://www.pathwaygenomics.com/
+name: Pathway Genomics well-known + contract discovery probe
+description: >-
+  Negative probe record for Pathway Genomics. The Pathway Genomics brand was retired: the
+  company renamed itself Pathway OME, and on 2021-01-25 its assets were acquired by investor
+  OME Ventures and rebranded OME Wellness. The historic host pathwaygenomics.com (registered
+  2008-11-04, the company's own registration) is now delegated to Afternic nameservers and
+  serves a GoDaddy aftermarket parking lander advertising the domain FOR SALE. That lander
+  answers HTTP 200 with the SAME 114-byte HTML redirect shell for EVERY path, including every
+  /.well-known/* path and every spec path. NONE of those 200s is a document. No WellKnown,
+  SecurityTxt, AgentCard, LLMsTxt or OpenAPI pointer is emitted from this probe, and none
+  should ever be emitted from it in a later round.
+
+host_status:
+  host: www.pathwaygenomics.com
+  controlled_by_provider: false
+  disposition: parked-for-sale
+  registrar: GoDaddy.com, LLC
+  domain_created: '2008-11-04'
+  domain_updated: '2025-09-17'
+  domain_expires: '2026-11-04'
+  nameservers:
+  - ns1.afternic.com
+  - ns2.afternic.com
+  mx: 'null MX (0 .) — the zone explicitly declares it accepts no mail'
+  note: >-
+    Unlike a re-registration by a third party, this IS the company's original 2008 registration;
+    it was moved onto GoDaddy/Afternic aftermarket nameservers and listed for sale. Root serves
+    <html><head><script>window.onload=...href="/lander"</script> and /lander 307s to
+    forsale.godaddy.com/forsale/www.pathwaygenomics.com.
+
+soft_200_catch_all: true
+hit_count: 0
+soft_200_note: >-
+  Every probed path returned 200 with content-length 114 and content-type text/html — the
+  identical parking redirect stub. A control path that cannot exist
+  (/definitely-not-a-real-path-xyz123) returned the same 200/114/text/html response. Treat
+  every one of these as a MISS.
+
+soft_404_control:
+  url: https://www.pathwaygenomics.com/definitely-not-a-real-path-xyz123
+  status: 200
+  content_type: text/html
+  bytes: 114
+  note: Control probe proving the host is a catch-all; identical body to every other 200.
+
+hosts:
+- host: https://www.pathwaygenomics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+    note: HTML parking shell, not a JSON AgentCard object. No AgentCard pointer emitted.
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    bytes: 114
+    document: false
+    result: miss
+    file: null
+    note: Legacy pre-0.3 path. HTML parking shell, not a JSON AgentCard object.
+
+contract_discovery:
+  openapi:
+  - url: https://www.pathwaygenomics.com/openapi.json
+    status: 200
+    content_type: text/html
+    parses_as_openapi: false
+    result: miss
+  - url: https://www.pathwaygenomics.com/openapi.yaml
+    status: 200
+    content_type: text/html
+    parses_as_openapi: false
+    result: miss
+  - url: https://www.pathwaygenomics.com/swagger.json
+    status: 200
+    content_type: text/html
+    parses_as_openapi: false
+    result: miss
+  - url: https://www.pathwaygenomics.com/api-docs
+    status: 200
+    content_type: text/html
+    parses_as_openapi: false
+    result: miss
+  - url: https://www.pathwaygenomics.com/docs
+    status: 200
+    content_type: text/html
+    parses_as_openapi: false
+    result: miss
+  - url: https://www.pathwaygenomics.com/redoc
+    status: 200
+    content_type: text/html
+    parses_as_openapi: false
+    result: miss
+  graphql: []
+  mcp: []
+  a2a_agent_card: []
+  wsdl: []
+  grpc: []
+  api_hosts_resolved:
+  - host: api.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146 (GoDaddy parking anycast)'
+    status: 0
+    note: DNS resolves via the parking wildcard, but the TLS/HTTP request never completes — no certificate is served for the subdomain.
+  - host: developer.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146'
+    status: 0
+    note: Same parking wildcard; no TLS.
+  - host: developers.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146'
+    status: 0
+  - host: docs.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146'
+    status: 0
+  - host: app.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146'
+    status: 0
+  - host: my.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146'
+    status: 0
+  - host: portal.pathwaygenomics.com
+    dns: 'wildcard A -> 13.248.169.48 / 76.223.54.146'
+    status: 0
+
+llms_txt:
+  url: https://www.pathwaygenomics.com/llms.txt
+  status: 200
+  content_type: text/plain
+  bytes: 607
+  is_real_llms_txt: false
+  result: miss
+  verbatim: |
+    # www.pathwaygenomics.com
+
+    > www.pathwaygenomics.com is a domain name currently listed for sale on GoDaddy's aftermarket. It is available via Buy-It-Now, Make-an-Offer, or Lease-to-Own, depending on the listing's current configuration.
+
+    ## Status
+    - For sale: Yes
+    - Listed on: GoDaddy (aftermarket)
+    - Marketplace listing: https://forsale.godaddy.com/forsale/www.pathwaygenomics.com
+    - Escrow / transfer: GoDaddy-backed, typical 5-7 business-day completion
+
+    ## How to buy
+    - Buy It Now, Make an Offer, or Lease-to-Own options are presented on the listing page.
+    - Transactions are protected by GoDaddy escrow.
+  note: >-
+    This file IS in llms.txt format (H1, summary blockquote, link sections) and would pass a
+    naive shape check — but it was authored by GoDaddy's domain-parking system to sell the
+    domain, not by Pathway Genomics, and its own text says the host is for sale. Recorded as a
+    MISS. No LLMsTxt pointer is emitted. This is a sharper false positive than the robots.txt
+    boilerplate seen on other parked hosts: a shape-only validator would credit it.
+
+sitemap:
+  url: https://www.pathwaygenomics.com/sitemap.xml
+  status: 200
+  bytes: 167
+  urls:
+  - https://www.pathwaygenomics.com/lander
+  note: Single parking-lander URL. No content, no reference pages.
+
+other_surfaces:
+- what: GitHub organization
+  url: https://api.github.com/orgs/pathwaygenomics
+  status: 404
+  result: miss
+- what: GitHub organization
+  url: https://api.github.com/orgs/pathway-genomics
+  status: 404
+  result: miss
+- what: PyPI package
+  url: https://pypi.org/pypi/pathway-genomics/json
+  status: 404
+  result: miss
+- what: npm registry search "pathway-genomics"
+  url: https://registry.npmjs.org/-/v1/search?text=pathway-genomics
+  status: 200
+  result: miss
+  note: >-
+    Only unrelated hits (@fontsource/pathway-extreme, @fontsource/pathway-gothic-one, igv,
+    @forwardimpact/pathway). No first-party Pathway Genomics package exists on npm.
+- what: Consumer product domain pathwayfit.com (PathwayFit test)
+  url: https://pathwayfit.com/
+  status: 302
+  result: miss
+  note: 302s to hugedomains.com/domain_profile.cfm?d=pathwayfit.com — also listed for sale.
+- what: Successor entity OME Wellness
+  url: https://omewellness.com/
+  status: 200
+  result: miss
+  note: >-
+    Live WordPress site, but it is a "Medical Weight Loss" clinic brand, not the genomics
+    business, and publishes no developer surface. Deliberately NOT wired as Pathway Genomics'
+    Website pointer — the Pathway Genomics brand was retired and this is a different product
+    under a successor holding company.
+- what: Name collision control — pathway.com
+  url: https://pathway.com/
+  status: 200
+  result: not-this-company
+  note: >-
+    pathway.com is "Pathway - Intelligence with no ceiling", a frontier AI lab. Unrelated to
+    Pathway Genomics. Recorded so a later round does not harvest its surface onto this slug.
+- what: Forge Global secondary-market listing (the harvest source)
+  url: https://forgeglobal.com/pathway-genomics_stock/
+  status: 403
+  result: blocked
+  note: >-
+    Cloudflare bot challenge ("Just a moment...") even with a browser User-Agent. Not dead —
+    our crawler was turned away. It is a secondary-market share listing venue, not a company
+    site (roadmap#56).
+
+conclusion: >-
+  Pathway Genomics has no API surface to enrich and no host it still controls. The company
+  never published a developer program, public API, SDK, CLI, or machine-readable
+  specification; its consumer- and clinician-facing products were ordered through a web
+  storefront and a mobile app, and its OME assistant was an IBM Watson-backed consumer app,
+  not a published API. This is a historical record, not a thin profile. Any future round
+  should re-read host_status before probing pathwaygenomics.com again.

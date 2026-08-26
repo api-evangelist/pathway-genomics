@@ -64,5 +64,19 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pathway Genomics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/pathway-genomics_stock/
+Pathway Genomics Corporation was a San Diego, California clinical laboratory and consumer genetics
+company (incorporated 2008) selling DNA-based tests direct to consumers and through clinicians —
+PathwayFit, SkinFit, Cardiac DNA Insight, Mental Health DNA Insight, Pain Medication DNA Insight,
+BRCATrue, ColoTrue, and the CancerIntercept liquid biopsy assays. IBM's Watson Group invested in
+2014 and the two debuted the Watson-powered OME wellness app at CES 2016. The company later renamed
+itself Pathway OME; on 2021-01-25 its assets were acquired by investor OME Ventures and rebranded
+OME Wellness.
+
+**Pathway Genomics never published a developer program, public API, SDK, CLI, or machine-readable
+specification.** Its original domain `pathwaygenomics.com` is now a GoDaddy aftermarket parking
+lander offering the domain for sale, and answers HTTP 200 with the same 114-byte redirect stub for
+every path — including `/openapi.json` and every `/.well-known/` path. None of those 200s is a
+document; see `well-known/pathway-genomics-well-known.yml` for the full negative probe record.
+This profile is retained as a historical record.
+
+- Harvest source (secondary-market listing venue, not the company's site): https://forgeglobal.com/pathway-genomics_stock/

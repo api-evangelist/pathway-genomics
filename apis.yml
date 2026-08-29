@@ -26,6 +26,17 @@ x-source: harvest:secondary-market
 x-harvest-source-url: https://forgeglobal.com/pathway-genomics_stock/
 x-tier: stub
 x-tier-reason: defunct-no-api-surface
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'

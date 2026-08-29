@@ -61,8 +61,6 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://forgeglobal.com/pathway-genomics_stock/
 x-coverage:
   state: none
   reason: defunct

@@ -60,7 +60,6 @@ maintainers:
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
 x-coverage:
   state: none
   reason: defunct

@@ -1,25 +1,21 @@
 aid: pathway-genomics
 name: Pathway Genomics
-description: >-
-  Pathway Genomics Corporation was a San Diego, California clinical laboratory and consumer
-  genetics company, incorporated in 2008 and operating a CLIA-certified, CAP-accredited lab at
-  6777 Nancy Ridge Drive. It sold DNA-based tests direct to consumers and through clinicians,
-  including the PathwayFit diet-and-fitness panel, SkinFit, Cardiac DNA Insight, the Mental
-  Health DNA Insight and Pain Medication DNA Insight pharmacogenomics panels, the BRCATrue and
-  ColoTrue hereditary cancer-risk tests, and the CancerIntercept Detect and Monitor liquid
-  biopsy assays. Its planned 2010 over-the-counter retail launch drew FDA scrutiny, the FDA
-  wrote to the company in September 2015 over its marketing of CancerIntercept Detect, and in
-  December 2015 it agreed to pay roughly $4M to settle US False Claims Act kickback
-  allegations. IBM's Watson Group invested in the company in 2014, and at CES in January 2016
-  the two debuted OME, a Watson-powered consumer genomic wellness app. The company later
-  renamed itself Pathway OME; on 2021-01-25 its assets were acquired by investor OME Ventures
-  amid customer complaints and rebranded as OME Wellness, which today trades as a medical
-  weight-loss brand rather than a genomics business. Pathway Genomics never published a
-  developer program, public API, SDK, CLI, or machine-readable specification. Its original
-  2008 domain pathwaygenomics.com is now delegated to Afternic nameservers and serves a GoDaddy
-  aftermarket parking lander offering the domain for sale, so it is deliberately not wired as a
-  Website pointer. This profile is retained as a historical record; there is no API surface to
-  enrich.
+description: Pathway Genomics Corporation was a San Diego, California clinical laboratory and consumer
+  genetics company, incorporated in 2008 and operating a CLIA-certified, CAP-accredited lab at 6777 Nancy
+  Ridge Drive. It sold DNA-based tests direct to consumers and through clinicians, including the PathwayFit
+  diet-and-fitness panel, SkinFit, Cardiac DNA Insight, the Mental Health DNA Insight and Pain Medication
+  DNA Insight pharmacogenomics panels, the BRCATrue and ColoTrue hereditary cancer-risk tests, and the
+  CancerIntercept Detect and Monitor liquid biopsy assays. Its planned 2010 over-the-counter retail launch
+  drew FDA scrutiny, the FDA wrote to the company in September 2015 over its marketing of CancerIntercept
+  Detect, and in December 2015 it agreed to pay roughly $4M to settle US False Claims Act kickback allegations.
+  IBM's Watson Group invested in the company in 2014, and at CES in January 2016 the two debuted OME,
+  a Watson-powered consumer genomic wellness app. The company later renamed itself Pathway OME; on 2021-01-25
+  its assets were acquired by investor OME Ventures amid customer complaints and rebranded as OME Wellness,
+  which today trades as a medical weight-loss brand rather than a genomics business. Pathway Genomics
+  never published a developer program, public API, SDK, CLI, or machine-readable specification. Its original
+  2008 domain pathwaygenomics.com is now delegated to Afternic nameservers and serves a GoDaddy aftermarket
+  parking lander offering the domain for sale, so it is deliberately not wired as a Website pointer. This
+  profile is retained as a historical record; there is no API surface to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/pathway-genomics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -39,7 +35,7 @@ deliveryModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-08-26'
-modified: '2026-08-26'
+modified: '2026-09-15'
 tags:
 - Company
 - Genomics
@@ -63,13 +59,11 @@ maintainers:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    The Pathway Genomics brand was retired after OME Ventures acquired the renamed Pathway OME
-    on 2021-01-25 and rebranded it OME Wellness, and the company's own 2008 domain
-    pathwaygenomics.com now sits on Afternic nameservers serving a GoDaddy for-sale parking
-    lander that answers HTTP 200 with the identical 114-byte redirect stub for every path —
-    including /openapi.json and every /.well-known/ path — while its own parked llms.txt states
-    the domain is listed for sale.
+  detail: The Pathway Genomics brand was retired after OME Ventures acquired the renamed Pathway OME on
+    2021-01-25 and rebranded it OME Wellness, and the company's own 2008 domain pathwaygenomics.com now
+    sits on Afternic nameservers serving a GoDaddy for-sale parking lander that answers HTTP 200 with
+    the identical 114-byte redirect stub for every path — including /openapi.json and every /.well-known/
+    path — while its own parked llms.txt states the domain is listed for sale.
   evidence:
   - url: https://www.pathwaygenomics.com/
     status: 200
@@ -97,3 +91,4 @@ x-enrichment:
   status: minimal
   artifacts_added: 1
   pass: local-v1
+x-status: defunct
